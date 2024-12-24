@@ -24,7 +24,7 @@ export class UserRoute {
     this.router.patch(
       '/updateuser',
       new ValidationMiddleware(UpdateUserDto).validate,
-      this.userController.createUser,
+      this.userController.updateUser,
     );
     this.router.get('/userdetails', this.userController.getUser);
   }
